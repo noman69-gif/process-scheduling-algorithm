@@ -1,0 +1,18 @@
+.buttonAlgo {
+  border-radius: 15px !important;
+  width: 70px;
+}
+
+#timeQuantum {
+  width: 80px;
+}
+
+.nav {
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 100%;
+}
