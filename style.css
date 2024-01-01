@@ -9,10 +9,11 @@
 
 .nav {
   color: white;
-
   display: flex;
   align-items: center;
-  justify-content: center;
-  cursor: pointer;
+  width: 100%;
+}
+
+.navbar {
   width: 100%;
 }
