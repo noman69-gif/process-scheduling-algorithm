@@ -157,7 +157,6 @@ $(document).ready(function () {
 
     $("#avgTurnaroundTime").val(avgTurnaroundTime / completedList.length);
     $("#avgWaitingTime").val(avgWaitingTime / completedList.length);
-    $("#throughput").val(completedList.length / maxCompletedTime);
   }
 
   //shortdest job first
@@ -244,7 +243,6 @@ $(document).ready(function () {
 
     $("#avgTurnaroundTime").val(avgTurnaroundTime / completedList.length);
     $("#avgWaitingTime").val(avgWaitingTime / completedList.length);
-    $("#throughput").val(completedList.length / maxCompletedTime);
   }
 
   //priority scheduling
@@ -365,7 +363,6 @@ $(document).ready(function () {
 
     $("#avgTurnaroundTime").val(avgTurnaroundTime / completedList.length);
     $("#avgWaitingTime").val(avgWaitingTime / completedList.length);
-    $("#throughput").val(completedList.length / maxCompletedTime);
   }
 
   //round robin
@@ -497,6 +494,20 @@ $(document).ready(function () {
 
     $("#avgTurnaroundTime").val(totalTurnaroundTime / completedList.length);
     $("#avgWaitingTime").val(totalWaitingTime / completedList.length);
-    $("#throughput").val(completedList.length / maxCompletedTime);
   }
+  function resetForm() {
+    $(".form-group-time-quantum").hide();
+    $(".prrr").hide();
+    $("#algorithmSelector").val("optFCFS");
+    $("#timeQuantum").val("");
+    $("#tblProcessList tbody").empty();
+    $("#tblResults tbody").empty();
+    $("#avgTurnaroundTime").val("");
+    $("#avgWaitingTime").val("");
+    $("#throughput").val("");
+    processList = [];
+  }
+  $("#btnReset").on("click", function () {
+    resetForm();
+  });
 });
